@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
+</head>
+
+<body>
+    <script>
+        const teori = 50;
+        const praktek = 80;
+        const hadir = 90;
+        const nama = "Susi";
+        console.log(nama);
+        const pelanggaran = false;
+        console.log((teori + praktek) / 2);
+
+        if (teori < 75) {
+            console.log("Tidak Lulus : Teori Kurang")
+        } else if (praktek < 80) {
+            console.log("Tidak Lulus : Praktek Kurang")
+        } else if (hadir < 90) {
+            console.log("Tidak Lulus : Kehadiran Kurang")
+        } else if (pelanggaran === true) {
+            console.log("Tidak Lulus : Pelanggaran Disiplin")
+        } else if ((teori + praktek / 2) > 90) {
+            console.log("Lulus : Sangat Baik")
+        } else if ((teori + praktek / 2) > 85) {
+            console.log("Lulus : Baik")
+        } else {
+            console.log("Lulus")
+        }
+    </script>
+</body>
+
+</html>
