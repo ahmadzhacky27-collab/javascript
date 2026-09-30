@@ -1,0 +1,55 @@
+<!-- event: onClick, onChange, onKeyUp, onKeyDown -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM dan event || Javascript</title>
+</head>
+
+<body>
+    <!-- elementTarget.addEventListener(); -->
+    <h1></h1>
+    <input type="text" id="nama" placeholder="Masukkan Nama">
+
+    <button id="simpan">Klik Saya</button>
+    <button id="hapus">Hapus</button>
+
+    <p id="sapaan">Hallo Nama : </p>
+    <script>
+        // document.getElementById('simpan').addEventListener('click', () => {
+        //     alert('duarrr')
+        // })
+
+        const heading = document.querySelector('h1')
+        const nama = document.querySelector('#nama')
+        const sapaan = document.querySelector('#sapaan')
+
+        function prosesSapaan() {
+            sapaan.innerText = `Hallo Nama : ${nama.value}`;
+            nama.value = "";
+        }
+
+        document.getElementById('simpan').addEventListener('click', () => {
+            // heading.innerText = "PPKD Jakarta Pusat";
+            // sapaan.innerText = `Halo Nama : ${nama.value}`;
+            prosesSapaan();
+        })
+
+        nama.addEventListener('keyup', function (event) {
+            if (event.key === "Enter") {
+                prosesSapaan();
+            }
+        })
+
+        document.getElementById('hapus').addEventListener('click', function () {
+            // heading.innerText = "";
+            prosesSapaan();
+        })
+
+    </script>
+</body>
+
+</html>
